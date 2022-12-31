@@ -19,10 +19,10 @@ import { GiHamburgerMenu, GiReturnArrow } from "react-icons/gi";
 import { useState } from "react";
 
 const coins = [
-  { value: 'BUSD', text: 'Binance USD (BUSD)' },
+  { value: 'WETH', text: 'Wrapped ETH (wETH)' },
   { value: 'USDC', text: 'USD Coin (USDC)' },
   { value: 'DAI', text: 'DAI Algo Stable (DAI)' },
-  { value: 'ETH', text: 'Ethereum (ETH)' }
+  { value: 'BUSD', text: 'Binance USD (BUSD)' }
 ]
 
 const AccountButton = ({ address, onDisconnect }) => {
