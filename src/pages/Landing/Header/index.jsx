@@ -50,7 +50,7 @@ const AccountButton = ({ address, onDisconnect }) => {
 };
 
 const CoinSelector = () => {
-  const [activeCoin, setActiveCoin] = useState('Binance USD (BUSD)');
+  const [activeCoin, setActiveCoin] = useState('Wrapped ETH (WETH)');
 
   return (
     <div class="dropdown coin-selector show">
