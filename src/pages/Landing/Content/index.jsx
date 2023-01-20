@@ -77,7 +77,7 @@ const Preview = ({ onConnect }) => {
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>Minted</div>
-            <div className="fw-bold">#/310</div>
+            <div className="fw-bold">#/1000</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>{"QUANTITY (MAX 2 PER TRANSACTION)"}</div>
