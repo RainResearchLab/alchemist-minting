@@ -46,7 +46,7 @@ const Description = () => {
         </h4> */}
         {/* <img alt="logo" src={window.origin + "/logo.png"} className="w-50" /> */}
       </div>
-      <img alt="alchemist" src={window.origin + "/how1.webp"} width="80%" />
+      <img alt="alchemist" src={window.origin + "/video1.webm"} width="80%" />
     </>
   );
 };
@@ -58,7 +58,7 @@ const Preview = ({ onConnect }) => {
   return (
     <div className="ms-auto me-auto p-3 landing-content-preview">
       <img
-        src={window.origin + "/landing.png"}
+        src={window.origin + "/how1.webp"}
         className="w-100 landing-content-picture"
       />
       {isConnected && (
