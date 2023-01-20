@@ -46,7 +46,7 @@ const Description = () => {
         </h4> */}
         {/* <img alt="logo" src={window.origin + "/logo.png"} className="w-50" /> */}
       </div>
-      <img alt="alchemist" src={window.origin + "/loopify.webp.png"} width="80%" />
+      <img alt="alchemist" src={window.origin + "/how1.webp"} width="80%" />
     </>
   );
 };
