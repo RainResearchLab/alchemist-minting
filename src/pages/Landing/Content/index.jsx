@@ -69,7 +69,7 @@ const Preview = ({ onConnect }) => {
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>PRICE</div>
-            <div className="fw-bold">{`${200 * quantity} USD`}</div>
+            <div className="fw-bold">{`${330 * quantity} USD`}</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>REMAINING SUPPLY</div>
@@ -80,7 +80,7 @@ const Preview = ({ onConnect }) => {
             <div className="fw-bold">#/310</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
-            <div>{"QUANTITY (MAX 50 PER TRANSACTION)"}</div>
+            <div>{"QUANTITY (MAX 2 PER TRANSACTION)"}</div>
             <div className="fw-bold d-flex align-items-center">
               <AiFillMinusSquare
                 size={24}
@@ -95,7 +95,7 @@ const Preview = ({ onConnect }) => {
                 style={{
                   cursor: "pointer",
                 }}
-                onClick={() => setQuantity(Math.min(50, quantity + 1))}
+                onClick={() => setQuantity(Math.min(2, quantity + 1))}
               />
             </div>
           </div>
