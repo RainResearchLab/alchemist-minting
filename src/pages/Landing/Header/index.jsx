@@ -73,20 +73,6 @@ const CoinSelector = () => {
 const Header = () => {
   const { address, connector, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
-  const [networkError, setNetworkError] = useState(false);
-
-useEffect(() => {
-  async function checkNetwork() {
-    const network = await web3.eth.net.getNetworkType();
-    if (network !== "ethereum") {
-      setNetworkError(true);
-    } else {
-      setNetworkError(false);
-    }
-  }
-  checkNetwork();
-}, []);
-
 
   const { show } = useConnectWalletModal();
 
@@ -123,15 +109,17 @@ useEffect(() => {
               />
 
               <CoinSelector />
-              {isConnected ? (
-                <AccountButton address={address} onDisconnect={disconnect} />
-              ) : (
-                <PrimaryButton
-                  text="CONNECT"
-                  leftIcon={<SlWallet />}
-                  onClick={onConnect}
-                />
-              )}
+              <div className="ml-3">
+                {!isConnected && 
+                  <div className="overlay-container">
+                    <div className="overlay-message">
+                      Please connect to Ethereum network
+                    </div>
+                    <AccountButton address={address} onDisconnect={disconnect} />
+                  </div>
+                }
+                {isConnected && <AccountButton address={address} onDisconnect={disconnect} /> }
+              </div>
             </div>
           </div>
         </div>
@@ -139,5 +127,6 @@ useEffect(() => {
     </>
   );
 };
+
 
 export default Header;
