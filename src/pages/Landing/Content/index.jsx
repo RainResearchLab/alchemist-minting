@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./index.scss";
-import "../../../src/NFTdisplay.jsx";
+import { NFTsDisplay } "../../../src/NFTdisplay.jsx";
 
 
 // import components
