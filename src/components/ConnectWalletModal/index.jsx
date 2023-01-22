@@ -128,6 +128,11 @@ const ConnectWalletModal = () => {
       }}
     >
       <div className="connect-wallet-modal">
+           {networkError ? (
+        <div className="text-danger mb-3">
+          Wrong network. Please switch to Ethereum network
+        </div>
+      ) : null}
         <div className="d-flex align-items-center justify-content-between">
           <AiOutlineQuestionCircle color="grey" size={24} />
           <h4 className="text-white">Connect Wallet</h4>
