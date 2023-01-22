@@ -126,9 +126,6 @@ useEffect(() => {
               {isConnected ? (
                 <AccountButton address={address} onDisconnect={disconnect} />
               ) : (
-              ={connector === "ethereum" ? "" : "Wrong network. Please switch to Ethereum network"}
-/>
-) : (
                 <PrimaryButton
                   text="CONNECT"
                   leftIcon={<SlWallet />}
