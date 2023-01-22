@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./index.scss";
+import "./NFTdisplay.jsx";
+
 
 // import components
 import { PrimaryButton } from "../../../components/Buttons";
@@ -20,30 +22,17 @@ const Description = () => {
     <>
       <div>
         <div className="main-text text-white fw-bold">
-          Mint The Alchemist <span className="text-primary-custom">NFT</span>{" "}
-          Collection
+          Mint The Alchemist's <span className="text-primary-custom">Founding Fathers</span>{" "}
+          NFT Collection
         </div>
         {/* <h2 className="description-text text-white fw-bold">
-          Receive exclusive benefits in the Up ecosystem
+          Receive exclusive benefits in the Alchemist ecosystem
         </h2> */}
         {/* <h3 className="mt-5 description-text text-white">
           <b>How does it work?</b>
-          {" It's simple..."}
+          {"Strategic Planning"}
         </h3>
-        <h4 className="mt-5 description-text text-white fw-bold">
-          You mint your nfts... you then have access to the UP token presale at
-          $1, the token will launch at $1.10 & is 100% backed by BUSD...
-          <br />
-          <br />
-          You will also get revenue share of everything in the UP ecosystem...
-          It will also give you WL to the top secret things coming soon &amp;
-          more utility in the coming weeks... UP token will be used by other
-          projects launching on BSC which makes it one of the best long term
-          holds...
-          <br />
-          <br />
-          Keep watching the announcements for more alpha...
-        </h4> */}
+
         {/* <img alt="logo" src={window.origin + "/logo.png"} className="w-50" /> */}
       </div>
       <img alt="alchemist" src={window.origin + "/loopify.webp"} width="80%" />
@@ -65,7 +54,7 @@ const Preview = ({ onConnect }) => {
         <div className="mt-3 text-white">
           <div className="d-flex align-items-center justify-content-between">
             <div>YOUR NFTS</div>
-            <div className="fw-bold">0 NFTS</div>
+            <div className="fw-bold">{nftsHeld} NFTS</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>PRICE</div>
