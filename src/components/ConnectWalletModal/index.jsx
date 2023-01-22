@@ -93,37 +93,20 @@ const WalletButton = ({
 };
 
 const ConnectWalletModal = () => {
-  const { connectors, error, isLoading, pendingConnector, connectAsync } = useConnect();
-  const [matches, setMatches] = useState(window.matchMedia("(max-width: 539px)").matches);
-  const [address, setAddress] = useState("");
-  const [network, setNetwork] = useState("");
-  const [networkError, setNetworkError] = useState(false);
+  const { connectors, error, isLoading, pendingConnector, connectAsync } =
+    useConnect();
 
-  useEffect(() => {
-    async function checkNetwork() {
-      const currentNetwork = await window.ethereum.networkVersion;
-      setNetwork(currentNetwork);
-      if (currentNetwork !== "1") {
-        setNetworkError(true);
-      } else {
-        setNetworkError(false);
-      }
-    }
-
-    checkNetwork();
-  }, []);
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 539px)").matches
+  );
 
   const { isOpen, hide } = useConnectWalletModal();
 
   useEffect(() => {
-    window.matchMedia("(max-width: 539px)").addEventListener("change", (e) => setMatches(e.matches));
+    window
+      .matchMedia("(max-width: 539px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
   }, []);
-
-  useEffect(() => {
-    if (connectors.length && connectors[0].isConnected) {
-      setAddress(connectors[0].account);
-    }
-  }, [connectors]);
 
   return (
     <Modal
@@ -145,27 +128,6 @@ const ConnectWalletModal = () => {
       }}
     >
       <div className="connect-wallet-modal">
-        <div className="d-flex align-items-center justify-content-between">
-          <AiOutlineQuestionCircle color="grey" size={24} />
-          <h4 className="text-white">Connect Wallet</h4>
-          <AiOutlineClose
-            style={{ cursor: "pointer" }}
-            onClick={() => {
-              hide();
-            }}
-          />
-        </div>
-        <div className="text-white mt-3 mb-3">
-          Connect your wallet to interact with the dApp
-        </div>
-        <div className="text-white mb-3">
-          {networkError ? (
-            <div className="text-danger mb-3">
-              Wrong network. Please switch to Ethereum network
-            </div>
-          ) : (
-            <div className="text-white mb-3">
-      ) : null}
         <div className="d-flex align-items-center justify-content-between">
           <AiOutlineQuestionCircle color="grey" size={24} />
           <h4 className="text-white">Connect Wallet</h4>
