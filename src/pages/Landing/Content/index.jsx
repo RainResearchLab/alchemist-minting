@@ -15,6 +15,22 @@ import { SlWallet } from "react-icons/sl";
 import { AiFillPlusSquare, AiFillMinusSquare } from "react-icons/ai";
 import { GiWoodAxe } from "react-icons/gi";
 
+
+function NFTsDisplay({address, contractAddress}) {
+  const [nftsHeld, setNftsHeld] = useState(1);
+
+  useEffect(() => {
+    async function getNFTsHeldByAddress() {
+      // Connect to the Ethereum blockchain and get the number of NFTs held by the address
+      // using the web3.js library as described in the previous answer
+      const nfts = await contract.methods.balanceOf(address).call();
+      setNftsHeld(nfts);
+    }
+    getNFTsHeldByAddress();
+  }, [address, contractAddress]);
+
+}
+
 const Description = () => {
   return (
     <>
@@ -37,23 +53,6 @@ const Description = () => {
     </>
   );
 };
-
-
-function NFTsDisplay({address, contractAddress}) {
-  const [nftsHeld, setNftsHeld] = useState(1);
-
-  useEffect(() => {
-    async function getNFTsHeldByAddress() {
-      // Connect to the Ethereum blockchain and get the number of NFTs held by the address
-      // using the web3.js library as described in the previous answer
-      const nfts = await contract.methods.balanceOf(address).call();
-      setNftsHeld(nfts);
-    }
-    getNFTsHeldByAddress();
-  }, [address, contractAddress]);
-
-}
-
 
 
 
