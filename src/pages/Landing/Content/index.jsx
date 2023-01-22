@@ -24,16 +24,7 @@ const Description = () => {
           Mint The Alchemist's <span className="text-primary-custom">Founding Fathers</span>{" "}
           NFT Collection
         </div>
-        {/* <h2 className="description-text text-white fw-bold">
-          Receive exclusive benefits in the Alchemist ecosystem
-        </h2> */}
-        {/* <h3 className="mt-5 description-text text-white">
-          <b>How does it work?</b>
-          {"Strategic Planning"}
-        </h3>
-
-        {/* <img alt="logo" src={window.origin + "/logo.png"} className="w-50" /> */}
-      </div>
+       
       <img alt="alchemist" src={window.origin + "/loopify.webp"} width="80%" />
     </>
   );
