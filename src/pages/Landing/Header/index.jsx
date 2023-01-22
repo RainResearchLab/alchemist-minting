@@ -110,10 +110,7 @@ const Header = () => {
               <CoinSelector />
               {isConnected ? (
                 <AccountButton address={address} onDisconnect={disconnect} />
-                <div className="overlay-container">
-                    <div className="overlay-message">
-                      Please connect to Ethereum network
-                    </div>
+                
               ) : (
                 <PrimaryButton
                   text="CONNECT"
