@@ -55,7 +55,7 @@ const Preview = ({ onConnect }) => {
         <div className="mt-3 text-white">
           <div className="d-flex align-items-center justify-content-between">
             <div>YOUR NFTS</div>
-            <div className="fw-bold">{nftsHeld} NFTS</div>
+            <div className="fw-bold"> NFTS</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>PRICE</div>
