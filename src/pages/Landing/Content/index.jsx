@@ -19,7 +19,7 @@ import { GiWoodAxe } from "react-icons/gi";
 const Description = () => {
   return (
     <>
-      <div>
+      
         <div className="main-text text-white fw-bold">
           Mint The Alchemist's <span className="text-primary-custom">Founding Fathers</span>{" "}
           NFT Collection
