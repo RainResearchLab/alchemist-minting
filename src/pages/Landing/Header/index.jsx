@@ -17,6 +17,7 @@ import { SlWallet } from "react-icons/sl";
 import { FaBook } from "react-icons/fa";
 import { GiHamburgerMenu, GiReturnArrow } from "react-icons/gi";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const coins = [
   { value: 'WETH', text: 'Wrapped ETH (wETH)' },
@@ -72,6 +73,20 @@ const CoinSelector = () => {
 const Header = () => {
   const { address, connector, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
+  const [networkError, setNetworkError] = useState(false);
+
+useEffect(() => {
+  async function checkNetwork() {
+    const network = await web3.eth.net.getNetworkType();
+    if (network !== "ethereum") {
+      setNetworkError(true);
+    } else {
+      setNetworkError(false);
+    }
+  }
+  checkNetwork();
+}, []);
+
 
   const { show } = useConnectWalletModal();
 
@@ -111,6 +126,9 @@ const Header = () => {
               {isConnected ? (
                 <AccountButton address={address} onDisconnect={disconnect} />
               ) : (
+              ={connector === "ethereum" ? "" : "Wrong network. Please switch to Ethereum network"}
+/>
+) : (
                 <PrimaryButton
                   text="CONNECT"
                   leftIcon={<SlWallet />}
