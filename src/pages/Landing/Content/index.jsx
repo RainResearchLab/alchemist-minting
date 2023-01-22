@@ -44,17 +44,6 @@ const Description = () => {
 const Preview = ({ onConnect }) => {
   const { isConnected } = useAccount();
   const [quantity, setQuantity] = useState(1);
-  const [nftsHeld, setNftsHeld] = useState(0);
-
-  useEffect(() => {
-    async function getNFTsHeldByAddress() {
-      const apiUrl = `https://api.opensea.io/api/v1/assets?owner=${isConnected}`;
-      const response = await fetch(apiUrl, {headers: { 'Authorization': `Bearer YOUR_API_KEY` }});
-      const data = await response.json();
-      setNftsHeld(data.assets.length);
-    }
-    getNFTsHeldByAddress();
-  }, [isConnected]);
 
   return (
     <div className="ms-auto me-auto p-3 landing-content-preview">
