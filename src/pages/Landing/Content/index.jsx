@@ -44,7 +44,6 @@ const Description = () => {
 const Preview = ({ onConnect }) => {
   const { isConnected } = useAccount();
   const [quantity, setQuantity] = useState(1);
-  const [quantity, setQuantity] = useState(1);
   const [nftsHeld, setNftsHeld] = useState(0);
 
   useEffect(() => {
