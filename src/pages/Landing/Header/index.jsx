@@ -17,7 +17,6 @@ import { SlWallet } from "react-icons/sl";
 import { FaBook } from "react-icons/fa";
 import { GiHamburgerMenu, GiReturnArrow } from "react-icons/gi";
 import { useState } from "react";
-import { useEffect } from "react";
 
 const coins = [
   { value: 'WETH', text: 'Wrapped ETH (wETH)' },
@@ -109,17 +108,19 @@ const Header = () => {
               />
 
               <CoinSelector />
-              <div className="ml-3">
-                {!isConnected && 
-                  <div className="overlay-container">
+              {isConnected ? (
+                <AccountButton address={address} onDisconnect={disconnect} />
+                <div className="overlay-container">
                     <div className="overlay-message">
                       Please connect to Ethereum network
                     </div>
-                    <AccountButton address={address} onDisconnect={disconnect} />
-                  </div>
-                }
-                {isConnected && <AccountButton address={address} onDisconnect={disconnect} /> }
-              </div>
+              ) : (
+                <PrimaryButton
+                  text="CONNECT"
+                  leftIcon={<SlWallet />}
+                  onClick={onConnect}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -127,6 +128,5 @@ const Header = () => {
     </>
   );
 };
-
 
 export default Header;
