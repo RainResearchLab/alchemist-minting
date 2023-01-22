@@ -49,18 +49,14 @@ const Preview = ({ onConnect }) => {
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>PRICE</div>
-            <div className="fw-bold">{`${330 * quantity} USD`}</div>
-          </div>
-          <div className="mt-1 d-flex align-items-center justify-content-between">
-            <div>REMAINING SUPPLY</div>
-            <div className="fw-bold">0 / 0</div>
+            <div className="fw-bold">{`${250 * quantity} USD`}</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>Minted</div>
             <div className="fw-bold">#/1000</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
-            <div>{"QUANTITY (MAX 2 PER TRANSACTION)"}</div>
+            <div>{"Quantity"}</div>
             <div className="fw-bold d-flex align-items-center">
               <AiFillMinusSquare
                 size={24}
@@ -83,7 +79,7 @@ const Preview = ({ onConnect }) => {
       )}
       {isConnected ? (
         <PrimaryButton
-          text="MINT"
+          text="APPROVE/MINT"
           leftIcon={<GiWoodAxe className="me-3" size={24} />}
           className="mt-3"
           onClick={() => { }}
