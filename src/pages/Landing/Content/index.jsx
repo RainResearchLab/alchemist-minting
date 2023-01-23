@@ -71,7 +71,7 @@ const Preview = ({ onConnect }) => {
                 style={{
                   cursor: "pointer",
                 }}
-                onClick={() => setQuantity(Math.min(2, quantity + 1))}
+                onClick={() => setQuantity(Math.min(20, quantity + 1))}
               />
             </div>
           </div>
