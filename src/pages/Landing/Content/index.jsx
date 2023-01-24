@@ -21,7 +21,7 @@ const Description = () => {
     <>
       
         <div className="main-text text-white fw-bold">
-          Mint The Alchemist's <span className="text-primary-custom">Founding Fathers</span>{" "}
+          Mint The Alchemist <span className="text-primary-custom">Founding Fathers</span>{" "}
           NFT Collection
         </div>
       <img alt="alchemist" src={window.origin + "/loopify.webp"} width="80%" />
