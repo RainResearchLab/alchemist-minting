@@ -12,7 +12,7 @@ const Footer = () => {
           width: "60%",
         }}
       >
-        2022 Copyright &copy; By The Alchemist. Prices paid are for the NFT art and any financial figures are estimated non-guaranteed projections. 
+        2022 Copyright &copy; By The Alchemist. Mint fees are for the NFT art and any financial figures are non-guaranteed projections. 
       </div>
       <div>
         <a
