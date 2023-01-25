@@ -24,7 +24,7 @@ const Description = () => {
           Mint The Alchemists <span className="text-primary-custom">Founding Fathers</span>{" "}
           NFT Collection
         </div>
-      <img alt="alchemist" src={window.origin + "/loopify.webp"} width="80%" />
+      <img alt="alchemist" src={window.origin + "/loopify.webp.png"} width="80%" />
     </>
   );
 };
