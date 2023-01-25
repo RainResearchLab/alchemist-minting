@@ -21,7 +21,7 @@ const Description = () => {
     <>
       
         <div className="main-text text-white fw-bold">
-          Mint The Alchemist <span className="text-primary-custom">Founding Fathers</span>{" "}
+          Mint The Alchemists <span className="text-primary-custom">Founding Fathers</span>{" "}
           NFT Collection
         </div>
       <img alt="alchemist" src={window.origin + "/loopify.webp"} width="80%" />
@@ -38,7 +38,7 @@ const Preview = ({ onConnect }) => {
   return (
     <div className="ms-auto me-auto p-3 landing-content-preview">
       <img
-        src={window.origin + "/how1.webp"}
+        src={window.origin + "/Discord_Banner_1.png"}
         className="w-100 landing-content-picture"
       />
       {isConnected && (
