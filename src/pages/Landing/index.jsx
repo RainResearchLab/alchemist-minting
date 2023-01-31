@@ -10,6 +10,18 @@ const Landing = () => {
       <Header />
       <Content />
     </div>
+    <div>
+      import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
+    
+    export default function Mint() {
+        return (
+            <CrossmintPayButton
+                clientId="efc2ed34-9321-4264-bdd5-70c112f9306b"
+                mintConfig={{"type":"erc-721","totalPrice":"<SELECTED_PRICE_IN_ETHER>","numberOfTokens":"<NUMBER_OF_NFTS>"}}
+    </div>            
+            />
+        );
+    }
   );
 };
 
