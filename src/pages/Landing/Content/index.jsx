@@ -100,7 +100,7 @@ const Preview = ({ onConnect }) => {
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>Total Supply Remaining For Public:</div>
-            <div className="fw-bold">464</div>
+            <div className="fw-bold">437</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>{"QUANTITY"}</div>
