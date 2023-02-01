@@ -20,7 +20,6 @@ import { ApproveToken } from "../../../components/approve";
 import { SlWallet } from "react-icons/sl";
 import { AiFillPlusSquare, AiFillMinusSquare } from "react-icons/ai";
 import { GiWoodAxe } from "react-icons/gi";
-import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 const CONTRACT_ADDRESS = '0xaa3906f986e0cd86e64c1e30ce500c1de1ef46ad';
 const Description = () => {
   return (
@@ -30,6 +29,28 @@ const Description = () => {
           Mint The Alchemists <span className="text-primary-custom">Founding Fathers</span>{" "}
           Collection On Ethereum
         </div>
+        {/* <h2 className="description-text text-white fw-bold">
+          Receive exclusive benefits in the Up ecosystem
+        </h2> */}
+        {/* <h3 className="mt-5 description-text text-white">
+          <b>How does it work?</b>
+          {" It's simple..."}
+        </h3>
+        <h4 className="mt-5 description-text text-white fw-bold">
+          You mint your nfts... you then have access to the UP token presale at
+          $1, the token will launch at $1.10 & is 100% backed by BUSD...
+          <br />
+          <br />
+          You will also get revenue share of everything in the UP ecosystem...
+          It will also give you WL to the top secret things coming soon &amp;
+          more utility in the coming weeks... UP token will be used by other
+          projects launching on BSC which makes it one of the best long term
+          holds...
+          <br />
+          <br />
+          Keep watching the announcements for more alpha...
+        </h4> */}
+        {/* <img alt="logo" src={window.origin + "/logo.png"} className="w-50" /> */}
       </div>
       <img alt="alchemist" src={window.origin + "/FINALPIC1.png"} width="100%" />
     </>
@@ -107,19 +128,6 @@ const Preview = ({ onConnect }) => {
                 onClick={() => {setQuantity(Math.min(5, quantity + 1))
                 
                   setMintAmount(Math.min(5, quantity + 1))
-                }}
-              />
-            </div>
-          </div>
-	  <div className="mt-1 d-flex align-items-center justify-content-between">
-            <div>{"MINT"}</div>
-            <div className="fw-bold d-flex align-items-center">
-              <CrossmintPayButton
-                clientId="efc2ed34-9321-4264-bdd5-70c112f9306b"
-                mintConfig={{
-                  type: "erc-721",
-                  totalPrice: `${330 * quantity}`,
-                  numberOfTokens: `${quantity}`
                 }}
               />
             </div>
