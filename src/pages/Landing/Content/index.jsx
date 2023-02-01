@@ -20,6 +20,7 @@ import { ApproveToken } from "../../../components/approve";
 import { SlWallet } from "react-icons/sl";
 import { AiFillPlusSquare, AiFillMinusSquare } from "react-icons/ai";
 import { GiWoodAxe } from "react-icons/gi";
+import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 const CONTRACT_ADDRESS = '0xaa3906f986e0cd86e64c1e30ce500c1de1ef46ad';
 const Description = () => {
   return (
