@@ -10,8 +10,6 @@ const Landing = () => {
       <Header />
       <Content />
     </div>           
-        );
-    }
   );
 };
 
