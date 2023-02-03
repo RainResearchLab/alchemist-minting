@@ -24,7 +24,8 @@ const coins = [
   { value: 'ETH', text: 'Wrapped Ethereum (WETH)'},
   { value: 'USDC', text: 'USD Coin (USDC)' },
   { value: 'DAI', text: 'DAI Algo Stable (DAI)' },
-  { value: 'BUSD', text: 'Binance USD (BUSD)' }
+  { value: 'BUSD', text: 'Binance USD (BUSD)' },
+  { value: 'XMINT', text: 'Credit Card (Xmint)' }
 ]
 
 const AccountButton = ({ address, onDisconnect }) => {
