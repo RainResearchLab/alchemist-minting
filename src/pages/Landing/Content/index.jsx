@@ -30,28 +30,6 @@ const Description = () => {
           Mint The Alchemists <span className="text-primary-custom">Founding Fathers</span>{" "}
           Collection On Ethereum
         </div>
-        {/* <h2 className="description-text text-white fw-bold">
-          Receive exclusive benefits in the Up ecosystem
-        </h2> */}
-        {/* <h3 className="mt-5 description-text text-white">
-          <b>How does it work?</b>
-          {" It's simple..."}
-        </h3>
-        <h4 className="mt-5 description-text text-white fw-bold">
-          You mint your nfts... you then have access to the UP token presale at
-          $1, the token will launch at $1.10 & is 100% backed by BUSD...
-          <br />
-          <br />
-          You will also get revenue share of everything in the UP ecosystem...
-          It will also give you WL to the top secret things coming soon &amp;
-          more utility in the coming weeks... UP token will be used by other
-          projects launching on BSC which makes it one of the best long term
-          holds...
-          <br />
-          <br />
-          Keep watching the announcements for more alpha...
-        </h4> */}
-        {/* <img alt="logo" src={window.origin + "/logo.png"} className="w-50" /> */}
       </div>
       <img alt="alchemist" src={window.origin + "/FINALPIC1.png"} width="100%" />
     </>
@@ -97,11 +75,11 @@ const Preview = ({ onConnect }) => {
         <div className="mt-3 text-white">
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>PRICE</div>
-            <div className="fw-bold">{`${300 * quantity} USD`}</div>
+            <div className="fw-bold">{`${330 * quantity} USD`}</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
-            <div>Total Supply Remaining For WL:</div>
-            <div className="fw-bold">600</div>
+            <div>Total Supply Remaining:</div>
+            <div className="fw-bold">413</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>{"QUANTITY"}</div>
