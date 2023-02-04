@@ -114,9 +114,7 @@ const Preview = ({ onConnect }) => {
         </div>
       )}
       {isConnected ? (
-              <><ApproveToken /><CrossmintPayButton
-          clientId="efc2ed34-9321-4264-bdd5-70c112f9306b"
-          mintConfig={{ "totalPrice": "330", "numberOfTokens": 1, "toPayWith": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" }} /></>
+              <><ApproveToken /></>
       ) : (
         <PrimaryButton
           text="CONNECT"
