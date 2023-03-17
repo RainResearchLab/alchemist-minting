@@ -79,7 +79,7 @@ const Preview = ({ onConnect }) => {
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>Total Supply Remaining:</div>
-            <div className="fw-bold">2</div>
+            <div className="fw-bold">SOLD OUT</div>
           </div>
           <div className="mt-1 d-flex align-items-center justify-content-between">
             <div>{"QUANTITY"}</div>
@@ -104,9 +104,9 @@ const Preview = ({ onConnect }) => {
                 style={{
                   cursor: "pointer",
                 }}
-                onClick={() => {setQuantity(Math.min(50, quantity + 1))
+                onClick={() => {setQuantity(Math.min(0, quantity + 1))
                 
-                  setMintAmount(Math.min(50, quantity + 1))
+                  setMintAmount(Math.min(0, quantity + 1))
                 }}
               />
             </div>
